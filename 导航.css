@@ -37,3 +37,16 @@ li{
 .pageNav a{
 	transition: all 0.5s;
 }
+*{ 
+	margin:0; padding:0;
+}
+ol,ul,li{ 
+	list-style:none;
+}
+a{
+	text-decoration: underline;
+}
+ 
+ins,a{ 
+	text-decoration:none;
+}
