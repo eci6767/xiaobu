@@ -2,17 +2,104 @@
 <head>
 <meta charset="utf-8">
 <title>我们的小窝</title>
-<link rel="stylesheet" type="text/css" href="css/styles.css">
-	</head>
-  <body>
-		<!-- 导航 -->
-		<nav class="pageNav">
-			<ul class="list">
-				<li><a href="#" target="_blank"><span>我们的小屋</span></a></li>
-				<li><a href="#" target="_blank"><span>时间线</span></a></li>
-				
-			</ul>
-		</nav>
-		<!-- 导航 end -->
-	</body>
-</html>
+<style>
+        /* 添加背景颜色烘托浪漫的氛围 */
+        body{
+            background-color: darksalmon;
+        }
+        .wrap {
+            position: relative;
+            width: 420px;
+            height: 400px;
+            margin: 20px auto;
+            /* border: 1px solid rebeccapurple; */
+            /* 此处的动画效果的一些属性，可自由发挥，动画名一定要和后面的相互对应 */
+            animation: love 1s infinite alternate;
+        }
+        /* 添加的文字信息的属性设置，可自由发挥 */
+        .wrap p{
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 100px;
+            height: 30px;
+            color: yellow;
+        }
+        
+        .box-left {
+            /* 此处通过给盒子1使用浮动属性使两个盒子重叠;或者第一个盒子不变，给第二个盒子用定位 用一种即可*/
+            /* float: left; */
+            width: 200px;
+            height: 350px;
+            background-color: red;
+            /* 平移、旋转 */
+            transform: translate(55px) rotate(-45deg);
+            /* 圆角属性 */
+            border-radius: 120px 120px 0 0;
+            /* 添加阴影光环 */
+            box-shadow: 0 0 80px 0 red;
+        }
+        .box-right {
+            /* 此处通过给盒子2使用定位属性使两个盒子重叠;或者给盒子1使用浮动属性，第二个盒子不变 用一种即可*/
+            position: relative;
+            top: -350px;
+            width: 200px;
+            height: 350px;
+            background-color: red;
+            /* 平移、旋转 */
+            transform: translate(161px) rotate(45deg);
+            /* 圆角属性 */
+            border-radius: 120px 120px 0 0;
+            /* 添加阴影光环 */
+            box-shadow: 0 0 80px 0 red;
+        }
+
+        /* 爱心的动画名字为love，一定要前后对应 */
+        @keyframes love{
+            /* 此处主要是通过变形属性的缩放来实现跳动 */
+            0%{
+                transform: scale(1);
+            }
+            50%{
+                transform: scale(0.8);
+            }
+            100%{
+                transform: scale(1.1);
+            }
+        }
+        /* 鼠标悬停的效果 */
+        .wrap:hover{
+            animation-play-state: paused;
+        }
+        p{
+                font-size: 20px;
+                text-align: center;
+                font-family: '楷体';
+                line-height: 30px;
+                color: chocolate;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <p>I Love you</p>
+        <div class="box-left">
+            <!-- 1 -->
+        </div>
+        <div class="box-right">
+            <!-- 2 -->
+        </div>
+    </div>
+        <p>与宝贝😘在一起的第一个520</p>
+        <p>时间很短</p>
+        <p>天涯很远</p>
+        <p>今后的一山一水</p>
+<p>一朝一夕</p>
+<p>只想与你一起度过</p>
+</body>
+
